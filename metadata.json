@@ -1,0 +1,6 @@
+{
+  "name": "Delivale Follow-up",
+  "description": "Sistema inteligente de atendimento com IA, automação de follow-up pelo WhatsApp, funil de contatos e agendamentos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
