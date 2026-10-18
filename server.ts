@@ -40,6 +40,12 @@ app.use('/api/webhooks', webhooksRouter);
 app.use('/api/simulator', simulatorRouter);
 app.use('/api/logs', logsRouter);
 
+// Endpoint para download do repositório completo compactado
+app.get('/api/export-repo', (_req, res) => {
+  const exportPath = path.resolve(process.cwd(), 'delivale-followup.tar.gz');
+  res.download(exportPath, 'delivale-followup.tar.gz');
+});
+
 // Health check endpoint
 app.get('/api/health', (_req, res) => {
   res.json({

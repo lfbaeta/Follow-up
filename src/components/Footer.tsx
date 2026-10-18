@@ -16,10 +16,29 @@ export const Footer: React.FC<FooterProps> = ({ onTabChange, onLogout, version =
           <span className="font-semibold text-[#0C2A4A]">Padrão (Delivale Admin)</span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="bg-emerald-500 text-white font-semibold px-3 py-1 rounded-md text-[11px] shadow-2xs">
             Versão {version}
           </span>
+
+          <a
+            href="https://github.com/lfbaeta/Follow-up"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-600 hover:text-[#0C2A4A] bg-slate-100 hover:bg-slate-200 border border-slate-300 px-2.5 py-1 rounded-md transition-colors font-mono text-[11px] inline-flex items-center gap-1.5"
+            title="Abrir repositório no GitHub"
+          >
+            <span>GitHub: lfbaeta/Follow-up</span>
+          </a>
+
+          <a
+            href="/api/export-repo"
+            download="delivale-followup.tar.gz"
+            className="text-slate-600 hover:text-[#0C2A4A] bg-slate-100 hover:bg-slate-200 border border-slate-300 px-2.5 py-1 rounded-md transition-colors text-[11px]"
+            title="Baixar repositório completo (.tar.gz)"
+          >
+            Baixar Código
+          </a>
 
           <button
             onClick={() => onTabChange('logs')}
